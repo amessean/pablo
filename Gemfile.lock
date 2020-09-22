@@ -232,7 +232,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails
+  autoprefixer-rails (~> 10.0, >= 10.0.0.2)
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
