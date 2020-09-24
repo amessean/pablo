@@ -1,0 +1,5 @@
+<%= simple_form_for @booking do |f| %>
+  <%= f.input :title, label: "Titre", placeholder: "Titre de l'évenement" %>
+  <%= f.input :category, label: "Catégorie", collection: Booking::CATEGORY, :prompt => "Catégorie de l'évenement" %>
+  <%= f.button :submit, "Créer", class: 'btn btn-secondary' %>
+<% end %>
