@@ -33,6 +33,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'redis'
 gem 'autoprefixer-rails'
+gem 'datetime_picker_input'
 
 
 group :development, :test do
