@@ -5,6 +5,10 @@ class BookingsController < ApplicationController
     @previous_bookings = @bookings.reject {|booking| booking.start_time.utc > Date.today}
   end
 
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
   def new
     @booking = Booking.new
   end
