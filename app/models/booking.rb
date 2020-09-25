@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-  belongs_to :users, optional: true
+  belongs_to :user, optional: true
   has_many :reviews, dependent: :destroy
   CATEGORY = ["Diner", "Party", "Weekend", "Holiday"]
   validates :start_time, :end_time, presence: true

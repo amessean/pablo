@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = Booking.all.where(user: current_user)
+    @future_bookings = @bookings.select {|booking| booking.start_time.utc > Date.today}
+    @previous_bookings = @bookings.reject {|booking| booking.start_time.utc > Date.today}
   end
 
   def new
@@ -9,6 +11,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
     if @booking.save
       redirect_to bookings_path
     else
