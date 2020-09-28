@@ -1,7 +1,8 @@
 <%= simple_form_for @booking do |f| %>
-  <%= f.input :title, label: "Titre", placeholder: "Titre de l'évenement" %>
-  <%= f.input :category, label: "Catégorie", collection: Booking::CATEGORY, :prompt => "Catégorie de l'évenement" %>
-  <%= f.input :start_time, as: :date_time_picker, input_html:
+  <%= f.input :title, label: "Titre", placeholder: "Titre de l'événement" %>
+  <%= f.input :category, label: "Catégorie", collection: Booking::CATEGORY, :prompt => "Catégorie de l'événement" %>
+  <%= f.input :place, label: "Lieu", placeholder: "Lieu de l'événement" %>
+  <%= f.input :start_time, label: "Début", as: :date_time_picker, input_html:
       { data:
         {
           date_format: "YYYY.MM.DD hh:mm A",
@@ -11,7 +12,7 @@
         }
       }%>
 
-      <%= f.input :end_time, as: :date_time_picker, input_html:
+      <%= f.input :end_time, label: "Fin", as: :date_time_picker, input_html:
       { data:
         {
           date_format: "YYYY.MM.DD hh:mm A",
