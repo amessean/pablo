@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'devise'
+gem 'uglifier'
 gem 'jquery-rails'
 gem 'redis'
 gem 'autoprefixer-rails'
