@@ -34,6 +34,7 @@ gem 'jquery-rails'
 gem 'redis'
 gem 'autoprefixer-rails'
 gem 'datetime_picker_input'
+gem 'cloudinary', '~> 1.12.0'
 
 
 group :development, :test do
